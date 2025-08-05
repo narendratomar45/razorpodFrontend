@@ -5,6 +5,7 @@ import {
   DialogTitle,
   DialogDescription,
 } from "@/components/ui/dialog";
+import type { Product } from "@/redux/slice/type";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   Loader,
@@ -16,14 +17,16 @@ import {
   CheckCircle,
 } from "lucide-react";
 import { useRef } from "react";
+import type { Variants } from "framer-motion";
+import type { Transition } from "framer-motion";
 
-const springTransition = {
+const springTransition: Transition = {
   type: "spring",
   stiffness: 200,
   damping: 25,
 };
 
-const staggerVariants = {
+const staggerVariants: Variants = {
   visible: {
     transition: {
       staggerChildren: 0.15,
@@ -32,7 +35,7 @@ const staggerVariants = {
   hidden: {},
 };
 
-const fadeUp = {
+const fadeUp: Variants = {
   hidden: { opacity: 0, y: 20 },
   visible: {
     opacity: 1,
@@ -49,7 +52,7 @@ const ProductDetailDialog = ({
 }: {
   open: boolean;
   onOpenChange: (open: boolean) => void;
-  product: any;
+  product: Product | null;
   loading: boolean;
 }) => {
   const dialogRef = useRef(null);

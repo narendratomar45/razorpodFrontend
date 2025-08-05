@@ -3,13 +3,14 @@ import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { Star, BadgePercent, ArrowRight } from "lucide-react";
 import type { Product } from "@/redux/slice/type";
+import type { Variants } from "framer-motion";
 
 interface Props {
   product: Product;
   onClick: (productId: number) => void;
 }
 
-const containerVariants = {
+const containerVariants: Variants = {
   hidden: {},
   show: {
     transition: {
@@ -19,7 +20,7 @@ const containerVariants = {
   },
 };
 
-const childVariants = {
+const childVariants: Variants = {
   hidden: { opacity: 0, y: 20 },
   show: {
     opacity: 1,
