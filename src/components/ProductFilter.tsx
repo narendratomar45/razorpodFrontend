@@ -62,7 +62,10 @@ const ProductFilter: React.FC<ProductFilterProps> = ({
               >
                 <option value="all">All</option>
                 {categories.map((cat) => {
-                  const categoryName = typeof cat === "string" ? cat : cat.name;
+                  const categoryName =
+                    typeof cat === "string"
+                      ? cat
+                      : (cat as { name: string }).name;
                   return (
                     <option key={categoryName} value={categoryName}>
                       {categoryName}
