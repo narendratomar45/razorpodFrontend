@@ -22,6 +22,11 @@ This is the frontend of the Product Showcase Explorer web application. It is bui
 - Framer Motion
 - Axios
 
+## This project successfully implements both Bonus Sections
+
+- Bonus 1: Advanced Animation Showcase
+- Bonus 2: Node.js/Express Backend Proxy with Caching
+
 ## Getting Started (Frontend)
 
 ### Install Dependencies - npm install
