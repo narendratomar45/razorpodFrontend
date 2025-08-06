@@ -2,7 +2,7 @@ import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 import type { Product } from "./type";
 
-const BASE_URL = "http://localhost:8080/api";
+const BASE_URL = "razorpodbackend-production.up.railway.app/api";
 
 export const getAllProducts = createAsyncThunk(
   "product/getAllProducts",
